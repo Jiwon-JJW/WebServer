@@ -17,11 +17,11 @@ public class User {
         this.email = email;
     }
 
-    public static User of(Map<String, String> userInfo) {
-        return new User(userInfo.get("userId"),
-                userInfo.get("password"),
-                userInfo.get("name"),
-                userInfo.get("email"));
+    public static User of(User user) {
+        return new User(user.getUserId(),
+                user.getPassword(),
+                user.getEmail(),
+                user.getName());
     }
 
     public boolean matchPassword(String password) {

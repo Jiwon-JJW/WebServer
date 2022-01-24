@@ -9,8 +9,8 @@ import static db.DataBase.matchUserByIdAndPassword;
 
 public class UserService {
 
-    public void save(Map<String, String> userInfo) {
-        addUser(User.of(userInfo));
+    public static void save(User user) {
+        addUser(User.of(user));
     }
 
     public boolean login(Map<String, String> userInfo) {
